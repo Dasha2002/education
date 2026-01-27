@@ -1,0 +1,36 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  background-color: white;
+  overflow-x: hidden;
+  zoom: 1;
+}
+
+button, input {
+  font-family: "Raleway", sans-serif;
+}
+
+@media (max-width: 1400px) {
+  body {
+    zoom: 0.9;
+  }
+}
+@media (max-width: 1200px) {
+  body {
+    zoom: 0.7;
+  }
+}
+@media (max-width: 900px) {
+  body {
+    zoom: 0.55;
+  }
+}
+@media (max-width: 680px) {
+  body {
+    zoom: 1;
+  }
+}
