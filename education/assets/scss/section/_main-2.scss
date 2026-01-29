@@ -1,0 +1,62 @@
+.main-2 {
+  margin: -155px 50px 0 50px;
+
+  .main-2-programs {
+    width: 735px;
+    padding: 5px;
+    border-radius: 100px;
+    background-color: #FFFFFF99;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(50px);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+
+    .main-2-btn-prog-college,
+    .main-2-btn-prog-bachelor,
+    .main-2-btn-prog-magistr {
+      font-size: 20px;
+      padding: 20px 60px;
+      background: none;
+      border: none;
+      border-radius: 100px;
+      color: #00000099;
+      cursor: pointer;
+    }
+
+    // Добавим стили для активной кнопки, чтобы она подсвечивалась
+    .main-2-btn-prog-college.active,
+    .main-2-btn-prog-bachelor.active,
+    .main-2-btn-prog-magistr.active {
+      background-color: #006499B2;
+      color: #FFFFFF;
+    }
+  }
+
+  // --- НОВЫЕ СТИЛИ ДЛЯ ОСТАЛЬНОЙ ВЕРСТКИ ---
+  .main-2-prog-inf {
+    margin-top: 40px;
+
+    // Логика показа/скрытия блоков
+    .info-block {
+      display: none; // По умолчанию все блоки скрыты
+      &.active {
+        display: block; // Показываем только тот, у которого есть класс .active
+      }
+    }
+
+    .main-2-inf-college, .main-2-inf-bachelor, .main-2-inf-magistr {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 25px;
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 17.16px;
+        }
+    }
+
+  }
+}
+

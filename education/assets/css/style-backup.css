@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #F4F4F4;
+  overflow-x: hidden;
+  zoom: 1;
+}
+
+button, input {
+  font-family: 'Inter', sans-serif;
+}
+
+@media (max-width: 1400px) {
+  body {
+    zoom: 0.9;
+  }
+}
+@media (max-width: 1200px) {
+  body {
+    zoom: 0.7;
+  }
+}
+@media (max-width: 900px) {
+  body {
+    zoom: 0.55;
+  }
+}
+@media (max-width: 680px) {
+  body {
+    zoom: 1;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* СТИЛИ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ */
+
+/* Шапка сайта */
+
+
+/* Обложка сайта шапки*/
+.main-1 {
+    height: 751px;
+    background-image: url("/assets/img/Слой 1 1.png"); /* <-- Важный момент с путем */
+    background-repeat: no-repeat;      /* Запрещаем картинке повторяться */
+    background-size: cover;            /* Растягиваем картинку, чтобы она покрыла весь блок */
+}
+.main-1-h h1{
+  margin: 0;
+  font-size: 76px;
+  padding-left: 50px;
+  padding-top: 214px;
+  font-weight: 600;
+}
+
+.text-main-1 p {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+  padding: 20px 0 0 50px;
+}
+
+.main-1-btn {
+  padding: 20px 0 0 50px;
+}
+
+.btn-open-popap {
+  padding: 15px 50px;
+  font-size: 18px;
+  border-radius: 30px;
+  color: #FFFFFF;
+  background-color: #44B944;
+  gap: 11px;
+  border: none;
+  display: flex;
+  align-items: center;
+  
+}
+.img-main-1-mob {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .main-1 {
+    background-image: url("/assets/img/font-gradient-main-1.png"); 
+    background-repeat: no-repeat;     
+    background-size: cover;            
+    border-radius: 30px;
+  }
+  .main-1-h h1 {
+    font-size: 48px;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-left: 0;
+  }
+  .text-main-1 p {
+    font-size: 16px;
+    text-align: center;
+    padding-left: 0;
+    padding-top: 0;
+  }
+  .main-1-btn {
+    padding: 10px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .img-main-1-mob {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Блок выбор программы */
+
+.main-2 {
+  margin: -155px 50px 0 50px;
+}
+.main-2-programs {
+  width: 735px;
+  padding: 5px;
+  border-radius: 100px;
+  background-color: #FFFFFF99; /* Полупрозрачный белый фон */
+  backdrop-filter: blur(50px); /* <--- ИСПРАВЛЕНО: добавили 'px'. 10px - хороший старт */
+  -webkit-backdrop-filter: blur(50px); /* Добавляем для поддержки в Safari */
+ 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+.main-2-btn-prog-college, 
+.main-2-btn-prog-bachelor, 
+.main-2-btn-prog-magistr {
+  font-size: 20px;
+  padding: 20px 60px;
+  background: none;
+  border: none;
+  border-radius: 100px;
+  color: #00000099;
+}
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */

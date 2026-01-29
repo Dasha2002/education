@@ -1,0 +1,137 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: white;
+  overflow-x: hidden;
+}
+
+button, input {
+  font-family: "Inter", sans-serif;
+}
+
+.main-1 {
+  height: 751px;
+  background-image: url("/assets/img/Слой 1 1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-1 h1 {
+  margin: 0;
+  font-size: 76px;
+  padding-left: 50px;
+  padding-top: 214px;
+  font-weight: 600;
+}
+
+.text-main-1 p {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+  padding: 20px 0 0 50px;
+}
+
+.main-1-btn {
+  padding: 20px 0 0 50px;
+}
+.main-1-btn .btn-open-popap {
+  padding: 15px 50px;
+  font-size: 18px;
+  border-radius: 30px;
+  color: #FFFFFF;
+  background-color: #44B944;
+  gap: 11px;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.img-main-1-mob {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .main-1 {
+    background-image: url("/assets/img/font-gradient-main-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+  }
+  .main-1 h1 {
+    font-size: 48px;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-left: 0;
+  }
+  .text-main-1 p {
+    font-size: 16px;
+    text-align: center;
+    padding-left: 0;
+    padding-top: 0;
+  }
+  .main-1-btn {
+    padding: 10px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .img-main-1-mob {
+    display: flex;
+    justify-content: center;
+  }
+}
+.main-2 {
+  margin: -155px 50px 0 50px;
+}
+.main-2 .main-2-programs {
+  width: 735px;
+  padding: 5px;
+  border-radius: 100px;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(50px);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+.main-2 .main-2-programs .main-2-btn-prog-college,
+.main-2 .main-2-programs .main-2-btn-prog-bachelor,
+.main-2 .main-2-programs .main-2-btn-prog-magistr {
+  font-size: 20px;
+  padding: 20px 60px;
+  background: none;
+  border: none;
+  border-radius: 100px;
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+.main-2 .main-2-programs .main-2-btn-prog-college.active,
+.main-2 .main-2-programs .main-2-btn-prog-bachelor.active,
+.main-2 .main-2-programs .main-2-btn-prog-magistr.active {
+  background-color: rgba(0, 100, 153, 0.6980392157);
+  color: #FFFFFF;
+}
+.main-2 .main-2-prog-inf {
+  margin-top: 40px;
+}
+.main-2 .main-2-prog-inf .info-block {
+  display: none;
+}
+.main-2 .main-2-prog-inf .info-block.active {
+  display: block;
+}
+.main-2 .main-2-prog-inf .main-2-inf-college, .main-2 .main-2-prog-inf .main-2-inf-bachelor, .main-2 .main-2-prog-inf .main-2-inf-magistr {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 25px;
+}
+.main-2 .main-2-prog-inf .main-2-inf-college .info-grid, .main-2 .main-2-prog-inf .main-2-inf-bachelor .info-grid, .main-2 .main-2-prog-inf .main-2-inf-magistr .info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 17.16px;
+}
+
+/*# sourceMappingURL=style.css.map */

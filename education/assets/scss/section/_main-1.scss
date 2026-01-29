@@ -1,0 +1,82 @@
+.main-1 {
+    height: 751px;
+    background-image: url("/assets/img/Слой 1 1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    h1 {
+        margin: 0;
+        font-size: 76px;
+        padding-left: 50px;
+        padding-top: 214px;
+        font-weight: 600;
+    }
+}
+
+.text-main-1 {
+    p {
+        font-size: 24px;
+        font-weight: 500;
+        margin: 0;
+        padding: 20px 0 0 50px;
+    }
+}
+
+.main-1-btn {
+    padding: 20px 0 0 50px;
+    
+    .btn-open-popap {
+        padding: 15px 50px;
+        font-size: 18px;
+        border-radius: 30px;
+        color: #FFFFFF;
+        background-color: #44B944;
+        gap: 11px;
+        border: none;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.img-main-1-mob {
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    .main-1 {
+        background-image: url("/assets/img/font-gradient-main-1.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 30px;
+    }
+    
+    .main-1 {
+        h1 {
+            font-size: 48px;
+            text-align: center;
+            padding-bottom: 5px;
+            padding-left: 0;
+        }
+    }
+    
+    .text-main-1 {
+        p {
+            font-size: 16px;
+            text-align: center;
+            padding-left: 0;
+            padding-top: 0;
+        }
+    }
+    
+    .main-1-btn {
+        padding: 10px 0 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .img-main-1-mob {
+        display: flex;
+        justify-content: center;
+    }
+}
