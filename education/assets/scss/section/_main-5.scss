@@ -1,0 +1,166 @@
+.main-5 {
+    padding: 120px 0 0 50px;
+
+    .text-main-5 {
+        padding: 0 50px 0 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 46px;
+        h2 {
+            font-size: 48px;
+            font-weight: 600;
+            margin: 0;
+        }
+        .links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+
+    .swiper-reviews {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .swiper {
+            max-width: 1450px; 
+            margin: 0 auto; 
+            overflow: hidden;
+        }
+        
+        .block-reviews {
+            max-width: 563px;
+            max-height: 339px;
+            padding: 40px;
+            background-color: #FFFFFF;
+            border-radius: 20px;
+            flex-shrink: 0; 
+
+            .review-title {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+                padding-bottom: 17px;
+                .text {
+                    h3 {
+                       font-size: 24px;
+                       margin: 0;
+                       padding-bottom: 10px; 
+                    }
+                    .date {
+                        font-size: 16px;
+                        opacity: 50%;
+                        margin: 0;
+                    }
+                } 
+            }
+            .text-reviews {
+                p {
+                    margin: 0;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .swiper-btn {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 50px 0 0;
+
+            .btn-swiper {
+                button {
+                    border: none;
+                    cursor: pointer;
+                    background: none;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main-5 {
+        padding: 51px 10px 0 10px;
+        
+        .text-main-5 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-bottom: 20px;
+            padding-right: 0;
+            
+            h2 {
+                font-size: 28px;
+                padding: 0;
+                margin-bottom: 15px;
+                white-space: normal;
+            }
+            
+            .links {
+                align-self: flex-start;
+            }
+        }
+
+        .swiper-reviews {
+            gap: 10px;
+            .swiper {
+                overflow: visible; 
+                height: auto;      
+            }
+
+            .swiper-wrapper {
+                display: flex;           
+                flex-direction: column;  
+                height: auto;            
+                transform: none;         
+            }
+
+            .swiper-slide {
+                padding-right: 10px; 
+                margin-bottom: 10px;
+                margin-left: 0;
+                margin-right: 0;
+
+                .block-reviews {
+                    padding: 20px;
+                    .review-title {
+                        padding-bottom: 10px;
+                        .text {
+                            h3 {
+                                font-size: 18px;
+                            }
+                            .date {
+                                font-size: 12px;
+                            }
+                        }
+                        
+                    }
+                    .text-reviews {
+                        p {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .swiper-btn {
+            display: flex;
+            flex-direction: row;
+            justify-content: center !important;
+            padding: 0 !important;
+            .btn-swiper {
+                display: none;
+            }
+        }
+
+    }
+}

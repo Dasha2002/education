@@ -14,4 +14,8 @@
     <div class="img-main-1-mob">
         <img class="main-1-img" src="assets/img/b8f9c915-0d56-4573-abdc-2dfb32ee5a59_removalai_preview 1.svg">
     </div>
+
+    <div class="ellips">
+        <img src="assets/img/Ellipse 2034.svg">
+    </div>
 </section>

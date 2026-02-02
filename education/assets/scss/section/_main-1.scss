@@ -3,6 +3,7 @@
     background-image: url("/assets/img/Слой 1 1.png");
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
     
     h1 {
         margin: 0;
@@ -42,6 +43,18 @@
     display: none;
 }
 
+.ellips {
+    position: absolute; 
+    right: -100px;
+    top: 824px;
+    z-index: 1;
+
+    img {
+        width: 527px;
+        height: 527px;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .main-1 {
         background-image: url("/assets/img/font-gradient-main-1.png");
@@ -78,5 +91,9 @@
     .img-main-1-mob {
         display: flex;
         justify-content: center;
+    }
+
+    .ellips {
+        display: none;
     }
 }
