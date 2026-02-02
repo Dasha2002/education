@@ -50,3 +50,40 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     } 
 });
+
+
+// Блок вопросы
+document.addEventListener('DOMContentLoaded', function() {
+    // Находим все блоки с вопросами
+    const questions = document.querySelectorAll('.main-6 .question');
+
+    // Добавляем обработчик клика на каждый вопрос
+    questions.forEach(question => {
+        question.addEventListener('click', function() {
+            // Проверяем, если кликаемый вопрос уже активен
+            const isActive = this.classList.contains('active');
+
+            // Сначала закрываем все вопросы
+            questions.forEach(q => {
+                q.classList.remove('active');
+                // Возвращаем всем кнопкам картинку "вниз"
+                const btnImg = q.querySelector('button img');
+                if (btnImg) {
+                    // Заменяем на вашу картинку для закрытого состояния
+                    btnImg.src = 'assets/img/Button (1).svg'; 
+                }
+            });
+
+            // Если кликнутый вопрос не был активен, открываем его
+            if (!isActive) {
+                this.classList.add('active');
+                // Меняем картинку у открытого вопроса на "вверх"
+                const activeBtnImg = this.querySelector('button img');
+                if (activeBtnImg) {
+                    // Заменяем на вашу картинку для открытого состояния
+                    activeBtnImg.src = 'assets/img/Button.svg';
+                }
+            }
+        });
+    });
+});

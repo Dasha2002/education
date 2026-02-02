@@ -17,6 +17,7 @@
     <?php include __DIR__ . '/includes/main-3.php'; ?> 
     <?php include __DIR__ . '/includes/main-4.php'; ?>
     <?php include __DIR__ . '/includes/main-5.php'; ?>
+    <?php include __DIR__ . '/includes/main-6.php'; ?>
 
 
     <script src="assets/js/main.js"></script>
