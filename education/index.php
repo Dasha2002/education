@@ -19,6 +19,10 @@
     <?php include __DIR__ . '/includes/main-5.php'; ?>
     <?php include __DIR__ . '/includes/main-6.php'; ?>
 
+    <?php include __DIR__ . '/includes/main-9.php'; ?>
+
+    <?php include __DIR__ . '/includes/footer.php'; ?>
+
 
     <script src="assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

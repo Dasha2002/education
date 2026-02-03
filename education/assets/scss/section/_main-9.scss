@@ -1,0 +1,105 @@
+.main-9 {
+    padding-top: 85px;
+    padding-bottom: 120px;
+    overflow: hidden; // ❗ обязательно для обрезанных краёв
+
+    h2 {
+        font-size: 48px;
+        font-weight: 600;
+        margin: 0;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+
+    // Swiper-контейнер — НИКАКИХ flex / gap / padding
+    .block-main-9 {
+        width: 100%;
+    }
+
+    .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    .swiper-slide {
+        width: 350px !important; 
+        height: 194px;           
+
+        background-color: #ffffff;
+        border-radius: 20px;
+        padding: 20px 20px 30px;
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .swiper-slide > img {
+         display: block;
+        max-width: 100%; // Ограничиваем ширину контейнером, чтобы картинка не вылезала
+        height: auto;    // Сохраняем исходные пропорции
+        margin: 0 auto;
+    }
+
+
+    .swiper-slide .text {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        justify-content: space-between;
+        gap: 24px;
+    }
+
+
+    .swiper-slide .text a {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #00000099;
+        white-space: nowrap;
+    }
+
+
+    .swiper-slide .text a img {
+        width: auto;
+        height: auto;
+        max-width: none;
+        max-height: none;
+        object-fit: initial;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main-9 {
+        padding: 60px 10px;
+
+        h2 {
+            font-size: 28px;
+            padding-bottom: 15px;
+        }
+
+        .block-main-9 {
+            .swiper-wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .swiper-slide {
+                    width: 100% !important;
+                    height: 100%;
+                    padding: 20px 51px !important;
+                    gap: 17px !important;
+
+                    .text {
+                        a {
+                            font-size: 14px !important;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}

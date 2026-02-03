@@ -111,3 +111,86 @@
         
     }
 }
+
+@media screen and (max-width: 500px) {
+    .main-6 {
+
+        padding: 60px 10px 80px 10px; 
+        position: relative; 
+
+        .heading-main-6 {
+            flex-direction: column;
+            align-items: center; 
+            padding-bottom: 15px; 
+
+            h2 {
+                font-size: 28px; 
+                text-align: center; 
+                margin-bottom: 0; 
+            }
+
+            
+            .view-programs-btn {
+                position: absolute; 
+                bottom: 20px;      
+                left: 50%;         
+                transform: translateX(-50%); 
+                border: 1px solid #006499 !important;
+                border-radius: 50px;
+                color: #006499 !important;
+                font-size: 18px;
+            }
+        }
+
+        .main-6-questions {
+           
+            grid-template-columns: 1fr; 
+            gap: 0;  
+
+            .question {
+                margin-bottom: 10px; 
+                padding: 20px 10px 19px 10px !important; 
+                gap: 10px !important;
+
+                .block-2 {
+                    .question-heading {
+                        h3 {
+                            font-size: 16px !important;
+                        }
+                    }
+                    p {
+                        font-size: 12px !important;
+                    }
+                }
+                
+                &.active {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px !important; 
+                    padding: 20px; // Отступы родительского блока, которые нам нужно "преодолеть"
+
+                    // ИЗМЕНЕНИЯ ЗДЕСЬ:
+                    // 1. Правильно выбираем картинку и текст, которые находятся внутри .block-2
+                    .block-2 {
+                        > img,
+                        > p {
+                            // 2. "Выталкиваем" их налево и направо на величину padding (20px)
+                            margin-left: -20px;
+                            margin-right: -20px;
+                        }
+
+                        > img {
+                            // 3. Увеличиваем ширину картинки, чтобы она заняла новое пространство
+                            width: calc(100% + 40px); // 100% + 20px слева + 20px справа
+                        }
+
+                        > p {
+                            // 4. Добавляем внутренние отступы тексту, чтобы он не прилипал к краям экрана
+                            padding-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

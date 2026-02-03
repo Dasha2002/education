@@ -87,3 +87,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+// Свайпер для партнеров
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (window.innerWidth > 500) {
+        new Swiper('.block-main-9', {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            loop: true,
+            centeredSlides: true,
+
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+            },
+
+            speed: 4000,
+            allowTouchMove: false,
+        });
+    }
+});
+
