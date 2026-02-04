@@ -24,7 +24,7 @@
     }
 }
 
-// Применяем миксин к глобальным кнопкам
+
 button.btn, a.btn {
     @include button-styles;
     
@@ -38,7 +38,7 @@ button.btn, a.btn {
     }
 }
 
-// Применяем миксин к вашим кнопкам
+// Кнопка с границей без заливки
 button[class*="view-programs-btn"], a[class*="view-programs-btn"] {
     @include button-styles;
     
@@ -49,3 +49,81 @@ button[class*="view-programs-btn"], a[class*="view-programs-btn"] {
     }
 }
 
+// Кнопка с заливокй 
+button[class*="view-programs-btn"], a[class*="view-programs-btn"] {
+    @include button-styles;
+    
+    &[class*="-background"] {
+        border-radius: 50px;
+        color: #ffffff !important;
+        background-color: #006499 !important;
+    }
+}
+
+
+
+// Кнопка для попап
+
+
+@mixin popap-button-styles {
+
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
+    
+    font-size: 18px;
+    font-weight: 600; 
+    border-radius: 30px;
+    color: #FFFFFF;
+    background-color: #44B944;
+    gap: 11px;
+    border: none;
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+
+
+    img {
+        width: 24px; 
+        height: 24px;
+    }
+}
+
+
+.btn-open-popap {
+    @include popap-button-styles;
+}
+
+
+
+// Кнопки для выбора программы обучения
+
+@mixin program-nav-button-styles {
+
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
+
+   
+    font-size: 20px;
+    padding: 20px 60px;
+    background: none;
+    border: none;
+    border-radius: 100px;
+    color: #00000099;
+}
+
+.main-2-btn-prog-college,
+.main-2-btn-prog-bachelor,
+.main-2-btn-prog-magistr {
+    @include program-nav-button-styles;
+}
+
+.main-2-btn-prog-college.active,
+.main-2-btn-prog-bachelor.active,
+.main-2-btn-prog-magistr.active {
+    background-color: #006499B2;
+    color: #FFFFFF;
+}

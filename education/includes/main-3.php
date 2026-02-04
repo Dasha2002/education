@@ -76,7 +76,7 @@
                             <li><img src="assets/img/lucide_clock.svg">2,5 года</li>
                         </ul>
                     </div>
-                    <button class="main-3-btn">Смотреть программы</button>
+                    <button class="main-3-btn it">Смотреть программы</button>
                 </div>
             </div>
             <div class="block-2">

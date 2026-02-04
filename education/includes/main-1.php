@@ -5,7 +5,7 @@
     <div class="text-main-1">
         <p>Помогаем учиться дистанционно<br> в лучших ВУЗах страны!</p>
     </div>
-    <div class="main-1-btn">
+    <div class="popap-1-btn">
         <button class="btn-open-popap">
             <img src="/assets/img/mdi_education-outline.svg">
             Начать учится

@@ -1,6 +1,6 @@
 <section class="main-2">
     <!-- Навигационные кнопки -->
-    <div class="main-2-programs">
+    <div class="nav-programs">
         <button class="main-2-btn-prog-college active">Колледж</button>
         <button class="main-2-btn-prog-bachelor">Бакалавриат</button>
         <button class="main-2-btn-prog-magistr">Магистратура</button>

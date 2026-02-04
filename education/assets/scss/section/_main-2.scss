@@ -1,7 +1,7 @@
 .main-2 {
   margin: -155px 50px 0 50px;
 
-  .main-2-programs {
+  .nav-programs {
     width: 735px;
     padding: 5px;
     border-radius: 100px;
@@ -41,9 +41,9 @@
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15);
 
     .info-block {
-      display: none; // Скрываем все блоки по умолчанию
+      display: none; 
       &.active {
-        display: block; // Показываем только активный блок
+        display: block; 
       }
     }
 
@@ -63,7 +63,6 @@
       flex-direction: row;
       gap: 12.5px;
       
-      // Убираем разделитель у последнего элемента
       &:last-child {
         border-right: none;
         padding-right: 0;
@@ -88,7 +87,6 @@
       margin: 0;
       color: #000000;
       text-align: left;
-     // white-space: nowrap;
     }
 
    
@@ -99,34 +97,14 @@
     }
 
     .text {
-      max-width: 60%; // Ограничиваем ширину текста, чтобы не "прижимал" кнопку
+      max-width: 60%; 
       font-size: 16px;
       color: #000000;
       line-height: 1.5;
       margin: 0;
     }
 
-    /*
-    .view-programs-btn {
-      background: none;
-      color: #000000;
-      border: none;
-      border-radius: 10px;
-      padding: 16px 30px;
-      font-size: 20px;
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 10px; 
-      white-space: nowrap; 
-
-      img {
-        width: 30px;
-        height: 30px;
-      }
-    }
-      */
+ 
   }
 
   .main-2-search-container {

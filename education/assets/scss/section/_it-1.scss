@@ -1,0 +1,96 @@
+.it-1 {
+    position: relative; 
+
+    .it-inf {
+        padding: 40px 50px 0;
+        /* ИЗМЕНЕНИЕ 1: Заменяем 'auto' на '1fr 1fr' для гибкости */
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Теперь обе колонки будут равной ширины и будут сжиматься */
+        gap: 42px;
+        align-items: center; /* Выравниваем блоки по центру по вертикали для аккуратного вида */
+
+        .block-1 {
+            position: relative; 
+            z-index: 3;         
+            
+            padding-top: 83px;
+            h1 {
+                font-size: 48px;
+                font-weight: 600;
+                margin: 0;
+                padding-bottom: 30px;
+            }
+            p {
+                font-size: 16px;
+                margin: 0;
+                padding-bottom: 40px;
+            }
+            .popap-1-btn {
+                padding: 0;
+            }
+        }
+
+        /* ИЗМЕНЕНИЕ 2: Добавляем стили для картинки, чтобы она тоже была адаптивной */
+        .block-2 {
+            img {
+                width: 100%; /* Картинка не будет шире своего блока */
+                height: auto;  /* Сохранит пропорции */
+                display: block; /* Убирает лишний отступ снизу */
+            }
+        }
+    }
+
+    > img:last-child {
+        position: absolute; 
+        top: 0;            
+        left: 0;           
+        width: 100%;       
+        height: 100%;      
+        object-fit: cover; 
+        z-index: 2;       
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .it-1 {
+        .it-inf {
+            padding: 35px 10px 0;
+            grid-template-columns: 1fr; 
+            gap: 29px; 
+            
+            .block-1 {
+                padding-top: 0; 
+                text-align: center; 
+
+                h1 {
+                    font-size: 28px;
+                    text-align: center; 
+                }
+                p {
+                    padding: 0; 
+                    font-size: 14px; 
+                    text-align: center;
+                }
+
+                .popap-1-btn {
+                    display: flex;
+                    justify-content: center; 
+                    margin-top: 20px;
+                    
+                    button {
+                        width: 100%; 
+                        max-width: 300px;
+                    }
+                }
+            }
+
+            .block-2 {
+                padding: 0 35px;
+            }
+        }
+
+        > img:last-child {
+            display: none;
+        }
+    }
+}

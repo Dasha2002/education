@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const buttons = document.querySelectorAll('.main-2-programs button');
+    const buttons = document.querySelectorAll('.nav-programs button');
     const infoBlocks = document.querySelectorAll('.info-block');
 
     buttons.forEach(button => {
@@ -17,6 +17,42 @@ document.addEventListener('DOMContentLoaded', function() {
                 targetBlock.classList.add('active');
             }
         });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Находим секцию, чтобы скрипт работал только здесь
+    const section = document.querySelector('.it-2');
+    if (!section) return;
+
+    const buttons = section.querySelectorAll('.nav-programs button');
+    const blocks = section.querySelectorAll('.block-it-3');
+
+    function showBlocks(level) {
+        blocks.forEach(block => {
+            if (level === 'all') {
+                block.classList.remove('hidden');
+            } else {
+                // Проверяем, есть ли у блока нужный класс
+                if (block.classList.contains(`level-${level}`)) {
+                    block.classList.remove('hidden');
+                } else {
+                    block.classList.add('hidden');
+                }
+            }
+        });
+    }
+
+    section.querySelector('.nav-programs').addEventListener('click', (event) => {
+        if (event.target.tagName === 'BUTTON') {
+            // Переключаем активную кнопку
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Показываем нужные блоки
+            const level = event.target.dataset.level;
+            showBlocks(level);
+        }
     });
 });
 
@@ -109,4 +145,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+ // Кнопка для перехода с главной страницы на страницу информационные технологии
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        const itButton = document.querySelector('.it');
+
+        if (itButton) {
+            itButton.addEventListener('click', function() {
+                window.location.href = 'it.php';
+            });
+        }
+    });
 
