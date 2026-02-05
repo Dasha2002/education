@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
- // Кнопка для перехода с главной страницы на страницу информационные технологии
+// Кнопка для перехода с главной страницы на страницу информационные технологии
     document.addEventListener('DOMContentLoaded', function() {
         
         const itButton = document.querySelector('.it');
@@ -159,3 +159,58 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+
+
+// popap блок
+document.addEventListener('DOMContentLoaded', function() {
+    const openPopupBtn = document.querySelector('.btn-open-popap');
+    const closePopupBtn = document.querySelector('.btn-close');
+    const popup = document.querySelector('.popap');
+    const body = document.body;
+
+    let scrollPosition = 0;
+
+    function openPopup() {
+
+        scrollPosition = window.scrollY;
+
+        body.classList.add('modal-open');
+
+        body.style.top = `-${scrollPosition}px`;
+
+        popup.classList.add('active');
+    }
+
+    function closePopup() {
+
+        body.classList.remove('modal-open');
+
+        body.style.top = '';
+
+        window.scrollTo(0, scrollPosition);
+
+        popup.classList.remove('active');
+    }
+
+    if (openPopupBtn) {
+        openPopupBtn.addEventListener('click', openPopup);
+    }
+
+    if (closePopupBtn) {
+        closePopupBtn.addEventListener('click', closePopup);
+    }
+
+    // Закрытие по клику на фон
+    popup.addEventListener('click', function(event) {
+        if (event.target === popup) {
+            closePopup();
+        }
+    });
+
+    // Закрытие по клавише Escape
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && popup.classList.contains('active')) {
+            closePopup();
+        }
+    });
+});

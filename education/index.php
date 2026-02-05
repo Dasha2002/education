@@ -12,6 +12,7 @@
 
 <body>
 
+    <?php include __DIR__ . '/includes/popap.php'; ?>
     <?php include __DIR__ . '/includes/main-1.php'; ?>  
     <?php include __DIR__ . '/includes/main-2.php'; ?> 
     <?php include __DIR__ . '/includes/main-3.php'; ?> 

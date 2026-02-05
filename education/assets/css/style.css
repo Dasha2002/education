@@ -1448,5 +1448,271 @@ footer .footer .footer-block-2 .block3 .text4 {
     color: #000000;
   }
 }
+.popap {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.3019607843);
+}
+
+.popap.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+body.modal-open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.popap .popap-block {
+  position: relative;
+  padding: 19px 100px 100px;
+  background: linear-gradient(210.29deg, #FFFFFF 2.13%, #D1E3E7 100%);
+  border-radius: 30px;
+  max-height: 90vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+.popap .popap-block .btn-close {
+  position: absolute;
+  right: 41px;
+  top: 47px;
+  background: none;
+  border: none;
+  width: 20px;
+  height: 20px;
+}
+.popap .popap-block .header-popap {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  padding-bottom: 30px;
+}
+.popap .popap-block .header-popap img {
+  padding-bottom: 20px;
+}
+.popap .popap-block .header-popap h2 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.popap .popap-block .header-popap p {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+}
+.popap .popap-block .form-popap form .form-fields .personal-inf {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+.popap .popap-block .form-popap form .form-fields .personal-inf .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.popap .popap-block .form-popap form .form-fields .personal-inf .form-group label {
+  font-size: 16px;
+  font-weight: 400;
+}
+.popap .popap-block .form-popap form .form-fields .personal-inf .form-group input {
+  padding: 21px 30px;
+  background-color: rgba(255, 255, 255, 0.5019607843);
+  border: 1px solid rgba(0, 100, 153, 0.3019607843);
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.popap .popap-block .form-popap form .form-fields .personal-inf .form-group:nth-child(3) {
+  grid-column: 1/-1;
+}
+.popap .popap-block .form-popap form .form-fields .level {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+.popap .popap-block .form-popap form .form-fields .level .level-p {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+.popap .popap-block .form-popap form .form-fields .level .nav-programs {
+  background-color: rgba(255, 255, 255, 0.5019607843);
+  border-radius: 30px;
+  border: none;
+  padding: 5px;
+}
+.popap .popap-block .form-popap form .form-fields .level .nav-programs button {
+  font-size: 16px;
+  padding-left: auto;
+  padding-right: auto;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  color: #006499;
+}
+.popap .popap-block .form-popap form .form-fields .level .nav-programs .active {
+  background-color: #006499;
+  color: white;
+}
+.popap .popap-block .form-popap form .form-fields .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+.popap .popap-block .form-popap form .form-fields .form-group label {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+.popap .popap-block .form-popap form .form-fields .form-group .custom-select-wrapper {
+  position: relative;
+}
+.popap .popap-block .form-popap form .form-fields .form-group .custom-select-wrapper select {
+  background-color: rgba(255, 255, 255, 0.5019607843);
+  padding: 21px 30px;
+  padding-right: 60px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 100, 153, 0.3019607843);
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.popap .popap-block .form-popap form .form-fields .form-group .custom-select-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 8px;
+  background-image: url("/assets/img/Vector 62.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+}
+.popap .popap-block .form-popap form .form-fields .submit-btn {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #006499;
+  border-radius: 50px;
+  font-size: 20px;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+}
+.popap .popap-block .form-popap form .form-fields .form-approval {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+  padding-top: 10px;
+  color: #000000;
+  text-align: center;
+}
+.popap .popap-block .form-popap form .form-fields .form-approval a {
+  color: #000000;
+}
+
+@media screen and (max-width: 500px) {
+  .popap {
+    padding: 0;
+  }
+  .popap .popap-block {
+    margin: 0 20px;
+    padding: 30px 35px 35px;
+  }
+  .popap .popap-block .btn-close {
+    display: none;
+  }
+  .popap .popap-block .header-popap {
+    padding-bottom: 15px;
+  }
+  .popap .popap-block .header-popap img {
+    width: 82px;
+    height: 50px;
+    padding-bottom: 4px;
+  }
+  .popap .popap-block .header-popap h2 {
+    font-size: 20px;
+    padding-bottom: 5px;
+  }
+  .popap .popap-block .header-popap p {
+    font-size: 12px;
+    padding-bottom: 0;
+  }
+  .popap .popap-block .form-popap form .form-fields .personal-inf {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+  .popap .popap-block .form-popap form .form-fields .personal-inf .form-group {
+    gap: 5px;
+    padding-bottom: 0;
+  }
+  .popap .popap-block .form-popap form .form-fields .personal-inf .form-group label {
+    font-size: 10px;
+  }
+  .popap .popap-block .form-popap form .form-fields .personal-inf .form-group input {
+    padding: 11px 15px;
+  }
+  .popap .popap-block .form-popap form .form-fields .level .level-p {
+    display: none;
+  }
+  .popap .popap-block .form-popap form .form-fields .level .nav-programs {
+    gap: 2px;
+  }
+  .popap .popap-block .form-popap form .form-fields .level .nav-programs button {
+    font-size: 11px;
+    padding: 7.5px 15.6px;
+  }
+  .popap .popap-block .form-popap form .form-fields .form-group {
+    gap: 5px;
+    padding-bottom: 10px;
+  }
+  .popap .popap-block .form-popap form .form-fields .form-group label {
+    font-size: 10px;
+  }
+  .popap .popap-block .form-popap form .form-fields .form-group .custom-select-wrapper select {
+    padding: 11px 10px 15px;
+    font-size: 12px;
+    border-radius: 3px;
+  }
+  .popap .popap-block .form-popap form .form-fields .form-group .custom-select-wrapper::after {
+    right: 10px;
+  }
+  .popap .popap-block .form-popap form .form-fields .submit-btn {
+    font-size: 14px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+  .popap .popap-block .form-popap form .form-fields .form-approval {
+    font-size: 8px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

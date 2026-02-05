@@ -1,0 +1,312 @@
+
+.popap {
+    display: none; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    z-index: 1000; 
+    backdrop-filter: blur(4px);
+    background-color: #0000004D; 
+}
+
+.popap.active {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+body.modal-open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.popap {
+    .popap-block {
+        position: relative;
+        padding: 19px 100px 100px;
+        background: linear-gradient(210.29deg, #FFFFFF 2.13%, #D1E3E7 100%);
+        border-radius: 30px;
+        max-height: 90vh; 
+        overflow-y: auto; 
+        scroll-behavior: smooth;
+
+        .btn-close {
+            position: absolute;
+            right: 41px;
+            top: 47px;
+            background: none;
+            border: none;
+            width: 20px;
+            height: 20px;
+        }
+
+        .header-popap {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            padding-bottom: 30px;
+            img {
+                padding-bottom: 20px;
+            }
+            h2 {
+                margin: 0;
+                font-size: 48px;
+                font-weight: 600;
+                padding-bottom: 10px;
+                text-align: center;
+            }
+            p {
+                font-size: 18px;
+                font-weight: 400;
+                margin: 0;
+                text-align: center;
+            }
+        }
+
+        .form-popap {
+            form {
+                .form-fields {
+                    .personal-inf {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr; 
+                        gap: 10px;
+                        padding-bottom: 10px;
+
+                        .form-group {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+
+                            label {
+                                font-size: 16px;
+                                font-weight: 400;
+                            }
+                            input {
+                                padding: 21px 30px;
+                                background-color: #FFFFFF80;
+                                border: 1px solid #0064994D;
+                                border-radius: 10px;
+                                width: 100%; 
+                                box-sizing: border-box; 
+                            }
+                        }
+
+                        .form-group:nth-child(3) {
+                            grid-column: 1 / -1; 
+                        }
+                    }
+
+                    .level {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        padding-bottom: 10px;
+
+                        .level-p {
+                            font-size: 16px;
+                            font-weight: 400;
+                            margin: 0;
+                        }
+
+                        .nav-programs {
+                            background-color: #FFFFFF80;
+                            border-radius: 30px;
+                            border: none;
+                            padding: 5px;
+                            button {
+                                font-size: 16px;
+                                padding-left: auto;
+                                padding-right: auto;
+                                padding-top: 17px;
+                                padding-bottom: 17px;
+                                color: #006499;
+                            }
+                            .active {
+                                background-color: #006499; 
+                                color: white;
+                            }
+                        }
+                    }
+
+                    .form-group {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        padding-bottom: 20px;
+
+                        label {
+                            font-size: 16px;
+                            font-weight: 400;
+                            margin: 0;
+                        }
+    
+                        .custom-select-wrapper {
+                            position: relative; 
+        
+                            select {
+                                background-color: #FFFFFF80;
+                                padding: 21px 30px;
+                                padding-right: 60px; 
+                                border-radius: 10px;
+                                border: 1px solid #0064994D;
+                                font-size: 18px;
+                                color: #00000099;
+                                width: 100%;
+                                box-sizing: border-box;
+                                cursor: pointer;
+                                appearance: none;
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                            }
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                top: 50%;
+                                right: 30px; 
+                                transform: translateY(-50%); 
+                                width: 14px;  
+                                height: 8px; 
+                                background-image: url('/assets/img/Vector 62.svg'); 
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                pointer-events: none; 
+                            }
+                        }
+                    }
+
+                    .submit-btn {
+                        width: 100%;
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                        background-color: #006499;
+                        border-radius: 50px;
+                        font-size: 20px;
+                        color: #FFFFFF;
+                        border: none;
+                        cursor: pointer;
+                    }
+
+                    .form-approval {
+                        font-size: 12px;
+                        font-weight: 400;
+                        margin: 0;
+                        padding-top: 10px;
+                        color: #000000;
+                        text-align: center;
+                        a {
+                            color: #000000;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .popap {
+        padding: 0;
+
+        .popap-block {
+            margin: 0 20px;
+            padding: 30px 35px 35px;
+
+            .btn-close {
+                display: none;
+            }
+
+            .header-popap {
+                padding-bottom: 15px;
+                img {
+                    width: 82px;
+                    height: 50px;
+                    padding-bottom: 4px;
+                }
+                h2 {
+                    font-size: 20px;
+                    padding-bottom: 5px;
+                }
+                p {
+                    font-size: 12px;
+                    padding-bottom: 0;
+                }
+            }
+
+            .form-popap {
+                form {
+                    .form-fields {
+                        .personal-inf {
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            gap: 5px;
+                            .form-group {
+                                gap: 5px;
+                                padding-bottom: 0;
+                                label {
+                                    font-size: 10px;
+                                }
+                                input {
+                                    padding: 11px 15px;
+                                }
+                            }
+                        }
+
+                        .level {
+                            .level-p {
+                                display: none;
+                            }
+                            .nav-programs {
+                                gap: 2px;
+
+                                button {
+                                    font-size: 11px;
+                                    padding: 7.5px 15.6px;
+                                }
+                            }
+                        }
+
+                        .form-group {
+                            gap: 5px;
+                            padding-bottom: 10px;
+                            label {
+                                font-size: 10px;
+                            }
+                            .custom-select-wrapper {
+                                select {
+                                    padding: 11px 10px 15px;
+                                    font-size: 12px;
+                                    border-radius: 3px;
+
+                                }
+                                &::after {
+                                right: 10px; 
+                            }
+                            }
+                        }
+
+                        .submit-btn {
+                            font-size: 14px;
+                            padding-top: 13px;
+                            padding-bottom: 13px;
+                        }
+
+                        .form-approval {
+                            font-size: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
